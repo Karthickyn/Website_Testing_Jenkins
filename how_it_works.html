@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Smell MyCity</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <style>
+    .menu-how-it-works {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <div class="content">
+      <div class="content-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch-2 flex-column">
+            <h2>Basic Function</h2>
+            <hr>
+            <ul>
+              <li>Submit a smell report:</li>
+              <ul>
+                <li>Launch the app and pick a rating for the smell you experience (from 1 through 5)</li>
+                <li>Add a description of the smell (optional, but highly recommended)</li>
+                <li>List any symptoms attributable to the experience (optional)</li>
+                <li>Add any notes relevant to your report (optional)</li>
+                <li>Hit "Submit Smell Report"</li>
+                <li>Please only enter information that you are comfortable with sharing anonymously on the public Smell MyCity map</li>
+              </ul>
+              <li>Check out the Smell MyCity map:</li>
+              <ul>
+                <li>Once submitted, all smell reports show up on the public Smell MyCity map</li>
+                <li>Smell reports will be represented by triangle icons</li>
+                <li>The color of each report's icon will match the given smell rating</li>
+                <li>Tapping on a smell report icon will reveal details about that report</li>
+                <li>To protect your privacy, the location of each report is shifted slightly on the map</li>
+                <li>NO personally identifiable information is shown on the map</li>
+                <li>Circle icons represent federal PM2.5 sensors - tap those icons for more info</li>
+              </ul>
+              <li>If you are in a location where the regulatory agency is connected with the app, they will receive information about your report, including:</li>
+              <ul>
+                <li>Your name and contact information, if you chose to enter those under "Settings"</li>
+                <li>The location of the smell (based on the GPS location of your phone)</li>
+                <li>Date, time and rating of the smell report</li>
+                <li>Description, symptoms and notes included in the smell report, if any</li>
+              </ul>
+            </ul>
+          </div>
+          <div class="flex-item flex-item-stretch flex-column">
+            <img class="image" src="img/UI-1.jpg">
+            <img class="image" src="img/UI-2.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-10682694-20', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</html>

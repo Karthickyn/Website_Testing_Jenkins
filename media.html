@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Smell MyCity</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <style>
+    .menu-media {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <div class="content">
+      <div class="content-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2>Media Kit</h2>
+            <hr>
+            <p class="text">
+              The media kit can be downloaded from <a href="https://drive.google.com/drive/folders/1xFXEOQW5i3pd3fTQTyKvIf4boWgcq98W" target="_blank">this link</a>.
+              The kit contains images of the user interface, organization logos (CMU CREATE Lab and Seventh Generation), application logos, and the demo video.
+            </p>
+            <h2>Recent Media</h2>
+            <hr>
+            <ul>
+              <li>
+                <p class="text-small-margin">
+                  <b>Carnegie Mellon University News</b>. Byron Spice. 2019.
+                  <a href="https://www.cs.cmu.edu/news/cmu-smell-pgh-air-pollution-reporting-app-goes-national" target="_blank">CMU's Smell PGH Air Pollution Reporting App Goes National</a>.
+                </p>
+              </li>
+              <li>
+                <p class="text-small-margin">
+                  <b>Seventh Generation</b>. 2019.
+                  <a href="https://www.seventhgeneration.com/blog/if-you-smell-something-now-you-can-say-something" target="_blank">If You Smell Something, Now You Can Say Something</a>.
+                </p>
+              </li>
+              <li>
+                <p class="text-small-margin">
+                  <b>Fast Company</b>. Mark Wilson. 2019.
+                  <a href="https://www.fastcompany.com/90326996/report-stinky-spots-in-your-city-with-this-free-app" target="_blank">Report stinky spots in your city with this free app</a>.
+                </p>
+              </li>
+              <li>
+                <p class="text-small-margin">
+                  <b>Global News Wire</b>. 2019.
+                  <a href="https://www.globenewswire.com/news-release/2019/03/29/1788489/0/en/Smell-Something-Say-Something-Carnegie-Mellon-and-Seventh-Generation-Partner-to-Take-Action-Against-Air-Pollution-with-Smell-MyCity-App.html" target="_blank">Smell Something, Say Something: Carnegie Mellon and Seventh Generation Partner to Take Action Against Air Pollution with "Smell MyCity" App</a>.
+                </p>
+              </li>
+              <li>
+                <p class="text-small-margin">
+                  <b>Business Journal</b>. 2019.
+                  <a href="https://www.northbaybusinessjournal.com/industrynews/technology/9444110-181/smell-mycity" target="_blank">Smell something, say something: New smartphone app lets you rate your city's air quality</a>.
+                </p>
+              </li>
+              <li>
+                <p class="text-small-margin">
+                  <b>89.3 WFPL</b>. 2019.
+                  <a href="https://wfpl.org/smell-mycity-is-louisvilles-smell-something-say-something-app/" target="_blank">'Smell MyCity' Is Louisville's Smell Something, Say Something App</a>.
+                </p>
+              </li>
+              <li>
+                <p class="text-small-margin">
+                  <b>Wave 3 News</b>. 2019.
+                  <a href="https://www.wave3.com/2019/03/29/smell-my-city-app-allows-louisvillians-report-foul-odors-pollution/" target="_blank">Smell My City app allows Louisvillians to report foul odors, pollution</a>.
+                </p>
+              </li>
+              <li>
+                <p class="text-small-margin">
+                  <b>TechRepublic</b>. 2019.
+                  <a href="https://www.techrepublic.com/videos/smell-mycity-app-combats-air-pollution/" target="_blank">Smell MyCity app combats air pollution</a>.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-10682694-20', 'auto');
+  ga('send', 'pageview');
+
+  function setDownloadUrl() {
+    var root_url = "http://api.smellpittsburgh.org/";
+    var api_url = "api/v1/smell_reports?timezone_offset=" + (new Date().getTimezoneOffset()) + "&start_time=1475121600&allegheny_county_only=true&format=csv";
+    $("#download-button").attr("href", root_url + api_url);
+  }
+
+  $(setDownloadUrl)
+</script>
+
+</html>
